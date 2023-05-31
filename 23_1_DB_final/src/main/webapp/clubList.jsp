@@ -23,7 +23,7 @@
 				ArrayList<String> clubNames = selectClub.getClubNames();
 				for(int i=0; i<clubNames.size(); i++){
 			%>
-				<a href="/23_1_DB_final/detailedClub.jsp?clubName=<%= clubNames.get(i) %>" class=mainClickBox><%= clubNames.get(i) %></a>	
+				<a href="/23_1_DB_final/detailedClub.jsp?clubName=<%= clubNames.get(i) %>" class=mainClickBox> <%= clubNames.get(i) %></a>	
 			<%
 				}
 			%>
