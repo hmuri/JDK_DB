@@ -14,7 +14,8 @@ public class select {
   
   ResultSet rs = null;
   
-  public void clubInfo(String club_name) {
+  public ArrayList<String> clubInfo(String club_name) {
+	ArrayList<String> clubInfo = new ArrayList<>();
     try {
       this.conn = DBUtil.getConnection();
       String view1 = "SELECT cv.club_name, cv.club_president, s.dept_name FROM club_view cv JOIN participates p ON cv.club_name = p.club_name JOIN student s ON p.s_ID = s.s_ID WHERE cv.club_president = s.s_name AND cv.club_name = ?";
@@ -23,16 +24,15 @@ public class select {
       this.rs = this.pstmt.executeQuery();
       this.pstmt.clearParameters();
       while (this.rs.next()) {
-        String a = this.rs.getString("club_name");
-        String b = this.rs.getString("club_president");
-        String c = this.rs.getString("dept_name");
-        System.out.println(String.valueOf(a) + "/" + b + "/" + c);
+    	  String clubName = this.rs.getString("club_name");
+          clubInfo.add(clubName);
       } 
     } catch (SQLException e) {
       e.printStackTrace();
     } finally {
       DBUtil.dbClose(this.rs, this.pstmt, this.conn);
-    } 
+    }
+    return clubInfo;
   }
   
   public ArrayList<String> getClubNames(){
@@ -55,7 +55,8 @@ public class select {
 	  return clubNames;  
   }
   
-  public void profInfo(String p_name) {
+  public ArrayList<String> profInfo(String p_name){
+	 ArrayList<String> profInfo = new ArrayList<>();
     try {
       this.conn = DBUtil.getConnection();
       String view2 = "SELECT p.p_name, cv.club_name, cv.area_name, cv.club_president FROM professor p JOIN guides g on p.p_ID = g.p_ID JOIN club_view cv ON g.club_name = cv.club_name WHERE p.p_name = ?";
@@ -64,20 +65,19 @@ public class select {
       this.rs = this.pstmt.executeQuery();
       this.pstmt.clearParameters();
       while (this.rs.next()) {
-        String a = this.rs.getString("p_name");
-        String b = this.rs.getString("club_name");
-        String c = this.rs.getString("area_name");
-        String d = this.rs.getString("club_president");
-        System.out.println(String.valueOf(a) + "/" + b + "/" + c + "/" + d);
+    	  String clubName = this.rs.getString("p_name");
+          profInfo.add(clubName);
       } 
     } catch (SQLException e) {
       e.printStackTrace();
     } finally {
       DBUtil.dbClose(this.rs, this.pstmt, this.conn);
-    } 
+    }
+    return profInfo;
   }
   
-  public void areaBudget() {
+  public String areaBudget() {
+	 String budget=null;
     try {
       this.conn = DBUtil.getConnection();
       String avg = "SELECT area_name, AVG(club_budget) AS avg_budget FROM club GROUP BY area_name";
@@ -88,11 +88,14 @@ public class select {
         String a = this.rs.getString("area_name");
         String b = this.rs.getString("avg_budget");
         System.out.println(String.valueOf(a) + "/" + b);
+        budget=b;
+        
       } 
     } catch (SQLException e) {
       e.printStackTrace();
     } finally {
       DBUtil.dbClose(this.rs, this.pstmt, this.conn);
-    } 
+    }
+    return budget;
   }
 }
