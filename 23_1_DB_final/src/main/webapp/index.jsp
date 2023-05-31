@@ -10,11 +10,12 @@
 </head>
 <body>
 	<div class=container>
-		<a href="/23_1_DB_final/detailedInform.jsp" class=mainClickBox>Sports</a>
-		<a href="/23_1_DB_final/detailedInform.jsp" class=mainClickBox>Academy</a>
-		<a href="/23_1_DB_final/detailedInform.jsp" class=mainClickBox>Culture</a>
-		<a href="/23_1_DB_final/detailedInform.jsp" class=mainClickBox>Performance</a>
-		<a href="/23_1_DB_final/detailedInform.jsp" class=mainClickBox>Religion</a>
+		<a href="/23_1_DB_final/detailedInform.jsp?areaName=Sports" class=mainClickBox>Sports</a>
+		<a href="/23_1_DB_final/detailedInform.jsp?areaName=Academy" class=mainClickBox>Academy</a>
+		<a href="/23_1_DB_final/detailedInform.jsp?areaName=Culture" class=mainClickBox>Culture</a>
+		<a href="/23_1_DB_final/detailedInform.jsp?areaName=Performance" class=mainClickBox>Performance</a>
+		<a href="/23_1_DB_final/activityStatus.jsp" class=mainClickBox>예산 통계 보기</a>
+		<a href="/23_1_DB_final/findClub.jsp" class=mainClickBox>동아리 찾기</a>
 	</div>
 </body>
 </html>

@@ -1,4 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="connect.select" %>
+<%@ page import="java.io.PrintWriter" %>
+<%@ page import="java.util.ArrayList" %>
+<% request.setCharacterEncoding("UTF-8"); %>
+
+<%
+
+select Budget = new select();
+ArrayList<String> budget = Budget.areaBudget();
+
+%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
@@ -10,13 +21,15 @@
 </head>
 <body>
 	<div class=container style="flex-direction: column;">
-		<div class=titleBox>장소별 동아리 활동 수</div>
-		<div class=headListBox>
-		
-		</div>
 		<div class=titleBox>분야별 동아리 평균 예산</div>
-		<div class=headListBox style="height: 8rem;">
-		
+		<div class=headListBox style="flex-direction: column;">
+			<%
+				for(int i=0; i<budget.size(); i++){
+			%>
+				<div class=inputBox><%= budget.get(i) %></div>
+			<%
+				}
+			%>
 		</div>
 	</div>
 </body>
