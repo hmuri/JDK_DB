@@ -10,11 +10,11 @@
 </head>
 <body>
 	<div class=container>
-		<a href="/DB_23_1/detailedInform.jsp" class=mainClickBox>Sports</a>
-		<a href="/DB_23_1/detailedInform.jsp" class=mainClickBox>Academy</a>
-		<a href="/DB_23_1/detailedInform.jsp" class=mainClickBox>Culture</a>
-		<a href="/DB_23_1/detailedInform.jsp" class=mainClickBox>Performance</a>
-		<a href="/DB_23_1/detailedInform.jsp" class=mainClickBox>Religion</a>
+		<a href="/23_1_DB_final/detailedInform.jsp" class=mainClickBox>Sports</a>
+		<a href="/23_1_DB_final/detailedInform.jsp" class=mainClickBox>Academy</a>
+		<a href="/23_1_DB_final/detailedInform.jsp" class=mainClickBox>Culture</a>
+		<a href="/23_1_DB_final/detailedInform.jsp" class=mainClickBox>Performance</a>
+		<a href="/23_1_DB_final/detailedInform.jsp" class=mainClickBox>Religion</a>
 	</div>
 </body>
 </html>

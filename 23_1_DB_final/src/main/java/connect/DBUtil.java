@@ -11,7 +11,7 @@ public class DBUtil {
     Connection conn = null;
     try {
       Class.forName("com.mysql.cj.jdbc.Driver");
-      conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/db1?serverTimezone=UTC", "root", "3128");
+      conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/db3?serverTimezone=UTC", "root", "cmj010326!");
     } catch (ClassNotFoundException error) {
       System.out.println("mysql driver" );
     } catch (SQLException error) {

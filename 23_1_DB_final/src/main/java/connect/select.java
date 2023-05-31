@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class select {
   PreparedStatement pstmt = null;
@@ -32,6 +33,26 @@ public class select {
     } finally {
       DBUtil.dbClose(this.rs, this.pstmt, this.conn);
     } 
+  }
+  
+  public ArrayList<String> getClubNames(){
+	  ArrayList<String> clubNames = new ArrayList<>();
+	  try {
+		  this.conn = DBUtil.getConnection();
+		  String query = "SELECT club_name FROM club";
+		  this.pstmt = this.conn.prepareStatement(query);
+	      this.rs = this.pstmt.executeQuery();
+	      
+	      while (this.rs.next()) {
+	          String clubName = this.rs.getString("club_name");
+	          clubNames.add(clubName);
+	        }
+	  }	  catch (SQLException e) {
+	      e.printStackTrace();
+	    } finally {
+	      DBUtil.dbClose(rs, pstmt, conn);
+	    }
+	  return clubNames;  
   }
   
   public void profInfo(String p_name) {

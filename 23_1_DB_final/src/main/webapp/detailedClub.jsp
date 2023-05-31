@@ -10,11 +10,11 @@
 </head>
 <body>
 	<div class=container>
-		<a href="/DB_23_1/addMember.jsp" class=mainClickBox style="height: 10rem;">부원 추가</a>
-		<a href="/DB_23_1/deleteMember.jsp" class=mainClickBox style="height: 10rem;">부원 삭제</a>
-		<a href="/DB_23_1/deleteClub.jsp" class=mainClickBox style="height: 10rem;">동아리 폐지</a>
-		<a href="/DB_23_1/addProf.jsp" class=mainClickBox style="height: 10rem;">지도교수 추가</a>
-		<a href="/DB_23_1/addProf.jsp" class=mainClickBox style="height: 10rem;">동아리 활동 추가</a>
+		<a href="/23_1_DB_final/addMember.jsp" class=mainClickBox style="height: 10rem;">부원 추가</a>
+		<a href="/23_1_DB_final/deleteMember.jsp" class=mainClickBox style="height: 10rem;">부원 삭제</a>
+		<a href="/23_1_DB_final/deleteClub.jsp" class=mainClickBox style="height: 10rem;">동아리 폐지</a>
+		<a href="/23_1_DB_final/addProf.jsp" class=mainClickBox style="height: 10rem;">지도교수 추가</a>
+		<a href="/23_1_DB_final/addProf.jsp" class=mainClickBox style="height: 10rem;">동아리 활동 추가</a>
 	</div>
 </body>
 </html>
