@@ -13,7 +13,7 @@ public class delete_member {
   
   String sql = null;
   
-  void deleteClub(String club_name) {
+  public void deleteClub(String club_name) {
     try {
       this.conn = DBUtil.getConnection();
       String removeC = "delete from Club where club_name = ?";
