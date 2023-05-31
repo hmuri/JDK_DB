@@ -24,8 +24,12 @@ public class select {
       this.rs = this.pstmt.executeQuery();
       this.pstmt.clearParameters();
       while (this.rs.next()) {
-    	  String clubName = this.rs.getString("club_name");
-          clubInfo.add(clubName);
+    	  String clubName = this.rs.getString("club_name"); // Retrieve the club name from the result set
+    	  String clubPresident = this.rs.getString("club_president"); // Retrieve the club president from the result set
+    	  String deptName = this.rs.getString("dept_name"); // Retrieve the department name from the result set
+    	  clubInfo.add(clubName);
+    	  clubInfo.add(clubPresident);
+    	  clubInfo.add(deptName);
       } 
     } catch (SQLException e) {
       e.printStackTrace();
@@ -65,8 +69,14 @@ public class select {
       this.rs = this.pstmt.executeQuery();
       this.pstmt.clearParameters();
       while (this.rs.next()) {
-    	  String clubName = this.rs.getString("p_name");
-          profInfo.add(clubName);
+    	  String profName = this.rs.getString("p_name"); // Retrieve the club name from the result set
+    	  String clubName = this.rs.getString("club_name"); // Retrieve the club president from the result set
+    	  String areaName = this.rs.getString("area_name");
+    	  String prsdName = this.rs.getString("club_president");// Retrieve the department name from the result set
+    	  profInfo.add(profName);
+    	  profInfo.add(clubName);
+    	  profInfo.add(areaName);
+    	  profInfo.add(prsdName);
       } 
     } catch (SQLException e) {
       e.printStackTrace();
