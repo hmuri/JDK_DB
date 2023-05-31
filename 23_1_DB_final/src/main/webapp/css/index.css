@@ -1,0 +1,83 @@
+body{
+	background-color: #00462A
+}
+
+.container{
+	height: 40rem;
+	display: flex;
+	border-radius: 6px;
+	margin: auto;
+	background-color: white;
+	opacity: 0.55;
+	margin-top: 2rem;
+	flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    overflow: auto;
+    color: black;
+}
+
+.headListBox{
+	width: 40rem;
+	height: 17rem;
+	display: flex;
+	border-radius: 6px;
+	margin: auto;
+	align-items: center;
+    text-align: center;
+    overflow: auto;
+    background-color: #e4f986;
+    color: black;
+}
+
+.titleBox{
+	display: flex;
+	font-size: 30px;
+	text-align: center;
+	font-weight: 500;
+	justify-content: center; /* 가로 가운데 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+	margin: 1rem auto;
+}
+
+.mainClickBox{
+	width: 20rem;
+	height: 14rem;
+	display: flex;
+	font-size: 30px;
+	text-align: center;
+	font-weight: 500;
+	justify-content: center; /* 가로 가운데 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+	margin: auto;
+	border: solid 2px green;
+	border-radius: 4px;
+	 text-decoration: none;
+	 color: black;
+}
+
+.typingBox{
+	width: 50rem;
+	height: 16rem;
+	display: flex;
+	justify-content: center; /* 가로 가운데 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+	margin: 1rem auto;
+	border-radius: 4px;	
+    background-color: #e4f986;
+}
+
+.inputBox{
+	width: 40rem;
+	height: 20px;
+	display: flex;
+	text-align: center;
+}
+
+.submitBox{
+	height: 25px;
+	display: flex;
+	text-align: center;
+	margin: auto;
+}
