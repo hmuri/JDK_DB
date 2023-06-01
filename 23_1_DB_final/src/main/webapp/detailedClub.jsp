@@ -16,8 +16,6 @@
 <body>
 	<div class=container>
 		<a href="/23_1_DB_final/addMember.jsp?clubName=<%= clubName %>" class=mainClickBox style="height: 10rem;">부원 추가</a>
-		<a href="/23_1_DB_final/deleteClub.jsp?clubName=<%= clubName %>" class=mainClickBox style="height: 10rem;">동아리 폐지</a>
-		<a href="/23_1_DB_final/clubInform.jsp?clubName=<%= clubName %>" class=mainClickBox style="height: 10rem;">동아리 정보 보기</a>
 		<a href="/23_1_DB_final/updateActivity.jsp?clubName=<%= clubName %>" class=mainClickBox style="height: 10rem;">동아리 활동 수정</a>
 	</div>
 </body>

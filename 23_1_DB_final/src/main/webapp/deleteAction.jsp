@@ -1,22 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ page import="connect.update" %>
+<%@ page import="connect.delete_member" %>
 <%@ page import="java.io.PrintWriter" %>
 <% request.setCharacterEncoding("UTF-8"); %>
 
 <%
-    String clubName = request.getParameter("clubName");
+    String clubName = request.getParameter("club_name");
     // clubName 변수를 원하는 방식으로 활용
 %>
 
 
 <%
-// 전송된 데이터 받기
-String location = request.getParameter("location");
-String day = request.getParameter("day");
 
-// update 클래스의 인스턴스 생성 및 changeAct() 메서드 호출
-update activity = new update();
-activity.changeAct(location, day, clubName);
+delete_member member = new delete_member();
+member.deleteClub(clubName);
 %>
 
 <!DOCTYPE html>
@@ -28,7 +24,7 @@ activity.changeAct(location, day, clubName);
 </head>
 <body>
 	<div class=container>
-		<div>활동 정보 수정이 정상적으로 완료되었습니다.</div>
+		<div>동아리 삭제가 정상적으로 완료되었습니다.</div>
 		<a href="/23_1_DB_final/">처음으로 돌아가기</a>
 
 	</div>

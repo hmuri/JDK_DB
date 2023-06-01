@@ -1,21 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ page import="connect.delete_member" %>
-<%@ page import="java.io.PrintWriter" %>
-<% request.setCharacterEncoding("UTF-8"); %>
 
-<%
-    String clubName = request.getParameter("clubName");
-    // clubName 변수를 원하는 방식으로 활용
-%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-
-<%
-
-delete_member member = new delete_member();
-member.deleteClub(clubName);
-%>
-
-<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -24,9 +10,16 @@ member.deleteClub(clubName);
 </head>
 <body>
 	<div class=container>
-		<div>동아리 삭제가 정상적으로 완료되었습니다.</div>
-		<a href="/23_1_DB_final/">처음으로 돌아가기</a>
-
+		<div class=container style="flex-direction: column;">
+		<div class=titleBox style="margin-top: 7rem;">동아리 폐지</div>
+		<div class=typingBox>
+			<form method="post" action="deleteAction.jsp">
+				<div class= titleBox style="margin-bottom: 2rem;">폐지할 동아리명을 입력해주세요</div>
+				<input type= "text" class= "inputBox"  name=club_name style="margin-bottom: 4px;" placeholder="동아리명">
+				<input type= "submit" class= "submitBox" style="background-color: green;" value="동아리 찾기">
+			</form>
+		
+		</div>
 	</div>
-</body> 
+</body>
 </html>

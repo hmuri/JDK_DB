@@ -11,7 +11,7 @@
 </head>
 <body>
 	<div class=container>
-		<a href="/23_1_DB_final/clubList.jsp" class=mainClickBox>동아리 목록</a>
+		
 		<a href="/23_1_DB_final/selectHead.jsp" class=mainClickBox>대표 선출</a>
 		<a href="/23_1_DB_final/activityStatus.jsp" class=mainClickBox>활동 현황</a>
 	</div>

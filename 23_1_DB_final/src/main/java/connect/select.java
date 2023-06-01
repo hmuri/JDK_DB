@@ -18,7 +18,7 @@ public class select {
 	ArrayList<String> clubInfo = new ArrayList<>();
     try {
       this.conn = DBUtil.getConnection();
-      String view1 = "SELECT cv.club_name, cv.club_president, s.dept_name FROM club cv JOIN participates p ON cv.club_name = p.club_name JOIN student s ON p.s_ID = s.s_ID WHERE cv.club_president = s.s_name AND cv.club_name = ?";
+      String view1 = "SELECT cv.club_name, cv.club_president, s.dept_name FROM club_view cv JOIN participates p ON cv.club_name = p.club_name JOIN student s ON p.s_ID = s.s_ID WHERE cv.club_president = s.s_name AND cv.club_name = ?";
       this.pstmt = this.conn.prepareStatement(view1);
       this.pstmt.setNString(1, club_name);
       this.rs = this.pstmt.executeQuery();
@@ -63,7 +63,7 @@ public class select {
 	 ArrayList<String> profInfo = new ArrayList<>();
     try {
       this.conn = DBUtil.getConnection();
-      String view2 = "SELECT p.p_name, cv.club_name, cv.area_name, cv.club_president FROM professor p JOIN guides g on p.p_ID = g.p_ID JOIN club cv ON g.club_name = cv.club_name WHERE p.p_name = ?";
+      String view2 = "SELECT p.p_name, cv.club_name, cv.area_name, cv.club_president FROM professor p JOIN guides g on p.p_ID = g.p_ID JOIN club_view cv ON g.club_name = cv.club_name WHERE p.p_name = ?";
       this.pstmt = this.conn.prepareStatement(view2);
       this.pstmt.setNString(1, p_name);
       this.rs = this.pstmt.executeQuery();
