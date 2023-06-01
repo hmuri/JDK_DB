@@ -8,7 +8,6 @@
     // clubName 변수를 원하는 방식으로 활용
 %>
 
-
 <%
 
 delete_member member = new delete_member();
