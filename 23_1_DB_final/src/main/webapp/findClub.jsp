@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div class=container>
-		<div class=container style="flex-direction: column;">
+		<div class=container style="flex-direction: column; opacity: 100%;">
 		<div class=titleBox style="margin-top: 7rem;">동아리 찾기</div>
 		<div class=typingBox>
 			<form method="post" action="findAction.jsp">

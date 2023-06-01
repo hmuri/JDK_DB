@@ -10,13 +10,13 @@
 </head>
 <body>
 	<div class=container>
-		<div class=container style="flex-direction: column;">
+		<div class=container style="flex-direction: column; opacity: 100%;">
 		<div class=titleBox style="margin-top: 7rem;">동아리 폐지</div>
 		<div class=typingBox>
 			<form method="post" action="deleteAction.jsp">
 				<div class= titleBox style="margin-bottom: 2rem;">폐지할 동아리명을 입력해주세요</div>
 				<input type= "text" class= "inputBox"  name=club_name style="margin-bottom: 4px;" placeholder="동아리명">
-				<input type= "submit" class= "submitBox" style="background-color: green;" value="동아리 찾기">
+				<input type= "submit" class= "submitBox" style="background-color: green;" value="동아리 폐지">
 			</form>
 		
 		</div>

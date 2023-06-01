@@ -22,11 +22,11 @@ ArrayList<String> budget = Budget.areaBudget();
 <body>
 	<div class=container style="flex-direction: column;">
 		<div class=titleBox>분야별 동아리 평균 예산</div>
-		<div class=headListBox style="flex-direction: column;">
+		<div class=headListBox style="flex-direction: column;  ">
 			<%
 				for(int i=0; i<budget.size(); i++){
 			%>
-				<div class=inputBox><%= budget.get(i) %></div>
+				<div class=inputBox style="margin: 1rem 0 1rem 3rem;"><%= budget.get(i) %></div>
 			<%
 				}
 			%>
